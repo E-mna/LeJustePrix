@@ -42,10 +42,16 @@ btn.addEventListener("click", () => {
       resultat.innerHTML = "GAME OVER";
       resultat.style.backgroundColor = "red";
 
-      let rejouer = prompt("Ey toi rejoue  (un mini 'ok' pour rejouer) ");
+      let rejouer = document.querySelector(".rejouer");
+
+      rejouer.addEventListener("click", () => {
+        location.reload();
+      });
+
+      /* let rejouer = prompt("Ey toi rejoue  (un mini 'ok' pour rejouer) ");
       if (rejouer == "ok") {
         location.reload();
-      }
+      } */
     }
   }
 });
