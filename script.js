@@ -2,6 +2,7 @@ let pseudo = prompt("taper ton pseudo");
 let resultat = document.querySelector(".resultat");
 let btn = document.querySelector("#btn");
 let prix = document.querySelector(".prix");
+let rejouer = document.querySelector(".rejouer");
 let tentative = 7;
 let compteur = 0;
 let cadeau = [
@@ -42,7 +43,7 @@ btn.addEventListener("click", () => {
       resultat.innerHTML = "GAME OVER";
       resultat.style.backgroundColor = "red";
 
-      let rejouer = document.querySelector(".rejouer");
+      rejouer.classList.remove("rejouer");
 
       rejouer.addEventListener("click", () => {
         location.reload();
